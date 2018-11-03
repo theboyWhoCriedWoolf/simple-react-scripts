@@ -1,6 +1,5 @@
 "use strict";
 
-const argv = require("yargs").argv;
 const path = require("path");
 const fs = require("fs");
 const url = require("url");
@@ -23,17 +22,15 @@ function ensureSlash(inputPath, needsSlash) {
   }
 }
 
-const disableType = argv.typescript !== undefined && !argv.typescript;
-
 const getPublicUrl = appPackageJson =>
   envPublicUrl || require(appPackageJson).homepage;
 
-const mergePaths = appPaths => {
-  const filePath = argv.overrides ? resolveApp(argv.overrides) : "";
-  return fs.existsSync(filePath)
-    ? Object.assign(appPaths, require(filePath))
-    : appPaths;
-};
+// const mergePaths = appPaths => {
+//   const filePath = argv.overrides ? resolveApp(argv.overrides) : "";
+//   return fs.existsSync(filePath)
+//     ? Object.assign(appPaths, require(filePath))
+//     : appPaths;
+// };
 
 // We use `PUBLIC_URL` environment variable or "homepage" field to infer
 // "public path" at which the app is served.
@@ -76,7 +73,7 @@ const resolveModule = (resolveFn, filePath) => {
 };
 
 // config after eject: we're in ./config/
-module.exports = mergePaths({
+module.exports = {
   dotenv: resolveApp(".env"),
   appPath: resolveApp("."),
   appBuild: resolveApp("build"),
@@ -92,7 +89,6 @@ module.exports = mergePaths({
   appNodeModules: resolveApp("node_modules"),
   publicUrl: getPublicUrl(resolveApp("package.json")),
   servedPath: getServedPath(resolveApp("package.json"))
-});
+};
 
 module.exports.moduleFileExtensions = moduleFileExtensions;
-module.exports.disableType = disableType;

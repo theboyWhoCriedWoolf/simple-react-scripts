@@ -47,7 +47,8 @@ if (env.stringified["process.env"].NODE_ENV !== '"production"') {
 }
 
 // Check if TypeScript is setup
-const useTypeScript = !paths.disableType && fs.existsSync(paths.appTsConfig);
+const useTypeScript =
+  !paths.disableTypescript && fs.existsSync(paths.appTsConfig);
 
 // style files regexes
 const cssRegex = /\.css$/;
