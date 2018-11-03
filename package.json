@@ -13,7 +13,9 @@
   "files": [
     "bin",
     "config",
+    "libs",
     "extendScripts",
+    "overrides.js",
     "scripts"
   ],
   "bin": {
