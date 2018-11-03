@@ -13,6 +13,7 @@
   "files": [
     "bin",
     "config",
+    "extendScripts",
     "scripts"
   ],
   "bin": {

@@ -32,7 +32,7 @@ switch (script) {
     const result = spawn.sync(
       "node",
       nodeArgs
-        .concat(require.resolve("../extendedScripts/" + script))
+        .concat(require.resolve("../extendScripts/" + script))
         .concat(args.slice(scriptIndex + 1)),
       { stdio: "inherit" }
     );
