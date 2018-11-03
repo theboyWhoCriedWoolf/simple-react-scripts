@@ -6,12 +6,12 @@ const program = require("commander");
 
 program
   .version("0.1.0")
-  .option("-o, --overridePath", "Overrides Paths")
+  .option("-o, --overridesPath", "Overrides Paths")
   .option("-dt, --disableType", "Ignore typescript")
   .parse(process.argv);
 
 const projectDir = path.resolve(fs.realpathSync(process.cwd()));
-const overridesPath = `${projectDir}/${program.overrides ||
+const overridesPath = `${projectDir}/${program.overridesPath ||
   "config-overrides.js"}`;
 
 const override = fs.existsSync(overridesPath) ? require(overridesPath) : {};
