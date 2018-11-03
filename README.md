@@ -76,9 +76,9 @@ module.exports = (webpackConfig, env, { paths, withoutLint }) => {
 At the moment, the only helper method is _withoutLint_. The reason for this is to create something really simple yet completely configurable by the user.
 If you want to add any specific libs and extend this library, then please do so and simply raise a PR.
 
-## Preventing typescript
+## Disabling typescript
 
-This is a feature added specifically to turn off typescript. The reason for this as you may be using typescript for your server but you dont want the webpack configuration to use typescript for your UI code.
+This is a feature added specifically to turn off typescript. This comes in handy if you are using typescript for your server, but you dont want the webpack configuration to use typescript for your UI code.
 
 Using this, you can disable typescript really easily:
 
