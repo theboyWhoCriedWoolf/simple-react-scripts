@@ -5,15 +5,19 @@ const path = require("path");
 const program = require("commander");
 
 program
-  .version("0.1.0")
-  .option("-o, --overridesPath", "Overrides Paths")
+  .version("1.0.6")
+  .option("-o, --overridesPath [path]", "Overrides Root")
   .option("-dt, --disableType", "Ignore typescript")
   .parse(process.argv);
 
-const projectDir = path.resolve(fs.realpathSync(process.cwd()));
-const overridesPath = `${projectDir}/${program.overridesPath ||
-  "config-overrides.js"}`;
+const configName = "config-overrides.js";
+const appDirectory = fs.realpathSync(process.cwd());
 
+// resolve the application path
+const resolveApp = relativePath =>
+  path.resolve(appDirectory, relativePath, configName);
+
+const overridesPath = resolveApp(program.overridesPath || "");
 const override = fs.existsSync(overridesPath) ? require(overridesPath) : {};
 
 const webpack =

@@ -37,7 +37,7 @@ Just like _react-scripts_, to run your aplication all you need to do is add `sim
 
 _simple-react-scripts_ will automatically look for a file called `config-overrides.js` at your project's root, which allows you to mutate the configuration.
 
-To use an alternative path, just supply this using `--overridesPath=path/to/your/config.js` in your package.json scripts.
+To use an alternative path, just supply the root path of your _config-overrides.js_ using `--overridesPath=root/path/to/your-config` in your package.json scripts.
 
 ###Overriding webpack
 
