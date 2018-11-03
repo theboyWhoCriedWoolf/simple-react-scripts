@@ -1,2 +1,2 @@
 require("./extend.base");
-require("../scripts/start");
+require("../scripts/test");
