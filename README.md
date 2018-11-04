@@ -31,13 +31,13 @@ Just like _react-scripts_, to run your aplication all you need to do is add `sim
 }
 ```
 
-##Overriding configurations
+## Overriding configurations
 
 _simple-react-scripts_ will automatically look for a file called `config-overrides.js` at your project's root, which allows you to mutate the configuration.
 
 To use an alternative path, just supply the root path of your _config-overrides.js_ using `--overridesPath=root/path/to/your-config` in your package.json scripts.
 
-###Overriding webpack
+## Overriding webpack
 
 ```js
 // config-overrides.js
@@ -46,7 +46,8 @@ module.exports = (webpackConfig, env, libs) => {
 };
 ```
 
-###Overriding paths
+## Overriding paths
+
 All paths used within _simple-react-scripts_ can be overridden. To do this just create method _(as illustrated below)_ within your overrides file.
 
 If a path method is specified, it will be executed before any webpack overrides. This will allow your webpack configuration to be executed with your updated paths.
@@ -67,7 +68,8 @@ module.exports.webpack = (webpackConfig, env, libs) => webpackConfig;
 module.exports = (webpackConfig, env, libs) => webpackConfig;
 ```
 
-##Libs & Helpers
+## Libs & Helpers
+
 This package was created with simplicity and flexibility in mind. The idea of libs is to provide access to additional helpers that will aid in overriding your webpack configuration.
 
 At the moment, only `withoutLint` is available. If you want to add any additional helpers, please feel free to submit a [Pull Request](https://github.com/theboyWhoCriedWoolf/simple-react-scripts/pulls).
