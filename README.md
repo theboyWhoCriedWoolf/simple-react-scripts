@@ -8,9 +8,7 @@ Just like [react-app-rewired](https://github.com/timarney/react-app-rewired) it 
 
 > This is a simplified version of react-scripts, containing only webpack and build scripts. It will **not** automatically generate Jest or Eslint configuration for you.
 
----
-
-##Quick start
+## Quick start
 
 ```js
 npm i -D simple-react-scripts
