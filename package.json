@@ -95,6 +95,7 @@
     "react-app-rewired",
     "webpackDevServer",
     "rewired",
-    "customizable"
+    "customizable",
+    "create-react-app 2"
   ]
 }

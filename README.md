@@ -1,6 +1,6 @@
 # simple-react-scripts
 
-Based on [react-app-rewired](https://github.com/timarney/react-app-rewired) and [react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts), _simple-react-scripts_ provides the absolute barebones webpack and scripts configuration as used by [Create React App](https://github.com/facebook/create-react-app/).
+Based on [react-app-rewired](https://github.com/timarney/react-app-rewired) and [react-scripts](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts) 2.0, _simple-react-scripts_ provides the absolute barebones webpack and scripts configuration as used by [Create React App](https://github.com/facebook/create-react-app/).
 
 This package is designed to help you configure and use _Create React App's_ webpack configuration and scripts, allowing you to quickly get started without having to set up any webpack configuration yourself.
 
